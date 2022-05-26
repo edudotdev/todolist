@@ -10,7 +10,7 @@ const Task = styled.div`
     border-bottom: 1px solid #ccc;
 
         @media only screen and (max-width: 600px) {
-            grid-template-columns: 1fr 35px 35px;
+            grid-template-columns: 1fr 30px 30px;
         } 
 
     span {

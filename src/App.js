@@ -11,6 +11,13 @@ const Container = styled.div`
   border-radius: 10px;
   display: grid;
   grid-gap: 20px;
+
+  @media only screen and (max-width: 600px) {
+    grid-gap: 15px;
+    border: none;
+    padding: 0;
+  } 
+
 `
 
 const Header = styled.header`

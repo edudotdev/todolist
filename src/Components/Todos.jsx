@@ -9,6 +9,10 @@ const Container = styled.div`
     border-radius: 5px;
     display: grid;
     grid-gap: 15px;
+
+        @media only screen and (max-width: 600px) {
+            padding: 15px;
+        }
 `
 
 const Nothing = styled.div`
