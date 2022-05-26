@@ -6,25 +6,15 @@ import styled from 'styled-components'
 
 const Container = styled.div`
   width: 100%;
-  max-width: 600px;
   border: 1px solid #ccc;
-  margin: 40px auto;
   padding: 20px;
   border-radius: 10px;
   display: grid;
   grid-gap: 20px;
-
-  @media only screen and (max-width: 600px) {
-    border-radius: 0px;
-    padding: 10px;
-    grid-gap: 10px;
-  }
 `
 
 const Header = styled.header`
-
   h1 {
-
     @media only screen and (max-width: 600px) {
       font-size: 25px;
     } 
@@ -44,7 +34,7 @@ function App() {
 
   useEffect(() => {
 
-    const handleFilter = e => {
+    const handleFilter = () => {
       if(filtro === 'active') {
         setFiltroTodos(todos.filter((todo) => todo.completed === false))
       }else if(filtro === 'completed') {
@@ -73,27 +63,27 @@ function App() {
   }
 
   return (
-    <Container>
+    <div className='wrapper_container'>
+      <Container>
+        <Header>
+          <h1>Todos</h1>
+        </Header>
 
-      <Header>
-        <h1>Todos</h1>
-      </Header>
-
-      <Form 
-        setInputText={setInputText}
-        inputText={inputText}
-        setTodos={setTodos}
-        todos={todos}
-        setFiltro={setFiltro} 
-      />
-      <Todos 
-        setTodos={setTodos}
-        todos={todos}
-        setFiltroTodos={setFiltroTodos}
-        filtroTodos={filtroTodos} 
-      />
-      
-    </Container>
+        <Form 
+          setInputText={setInputText}
+          inputText={inputText}
+          setTodos={setTodos}
+          todos={todos}
+          setFiltro={setFiltro} 
+          />
+        <Todos 
+          setTodos={setTodos}
+          todos={todos}
+          setFiltroTodos={setFiltroTodos}
+          filtroTodos={filtroTodos} 
+          />
+      </Container>
+    </div>
   );
 }
 

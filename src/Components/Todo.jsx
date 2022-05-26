@@ -14,7 +14,6 @@ const Task = styled.div`
         } 
 
     span {
-        font-size: 18px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -30,7 +29,6 @@ const Task = styled.div`
 const ButtonsTasks = styled.button`
     border: none;
     border-radius: 5px;
-    font-size: 18px;
     width: 40px;
     line-height: 40px;
     max-height: 40px;
@@ -39,6 +37,7 @@ const ButtonsTasks = styled.button`
     cursor: pointer;
     outline: none;
     transition: all .4s ease; 
+    padding: 8px 2px 2px 5px;
 
     &&:hover {
         transform: translateX(-1px) translateY(-1px); 
@@ -47,8 +46,6 @@ const ButtonsTasks = styled.button`
     @media only screen and (max-width: 600px) {
         width: 35px;
         line-height: 35px;
-        max-height: 35px;
-        font-size: 14px;
     } 
 `
 
@@ -75,8 +72,8 @@ const Todo = ({setTodos, todos, todo}) => {
     return ( 
         <Task>
             <span className={completed ? 'completed' : null}>{text}</span> 
-            <ButtonsTasks onClick={HandleCompleted} className={`btnCompleted ${completed ? 'grayscale' : null}`}><i className="fas fa-check"></i></ButtonsTasks>
-            <ButtonsTasks onClick={HandleDelete} className="btnTrash"><i className="far fa-trash-alt"></i></ButtonsTasks>
+            <ButtonsTasks onClick={HandleCompleted} className={`btnCompleted ${completed ? 'grayscale' : null}`}><svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></ButtonsTasks>
+            <ButtonsTasks onClick={HandleDelete} className="btnTrash"><svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg></ButtonsTasks>
         </Task>
      );
 }

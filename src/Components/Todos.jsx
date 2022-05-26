@@ -17,11 +17,8 @@ const Nothing = styled.div`
 `
 
 const Todos = ({setTodos, todos, filtroTodos}) => {
-
-     
     return ( 
         <Container> 
-            
             {filtroTodos.length ? filtroTodos.map(todo => (
                 <Todo 
                     key={todo.id}
@@ -30,8 +27,6 @@ const Todos = ({setTodos, todos, filtroTodos}) => {
                     todos={todos}
                 />
             )) : <Nothing className="completed">// Nothing</Nothing> }
-
-            
         </Container>
      );
 }

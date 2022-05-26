@@ -9,8 +9,8 @@ const Buscador = styled.input`
     border-radius: 5px;
 
     @media only screen and (max-width: 600px) {
-      font-size: 15px;
-      padding: 5px 7.5px;
+      font-size: 20px;
+      padding: 10px;
     } 
 `
 
@@ -28,12 +28,11 @@ const Forms = styled.form`
 const Select = styled.select`
     font-family: 'Quicksand', sans-serif;
     padding: 10px;
-    font-size: 15px;
+    font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
 
         @media only screen and (max-width: 600px) {
-            font-size: 12px;
             padding: 5px;
         }
 

@@ -8,6 +8,18 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
+.wrapper_container {
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 15px;
+}
+
+.btn{
+  display: grid;
+  place-items: center;
+}
+
 .btnCompleted {
   background: #07e2bb;
 }
@@ -31,4 +43,9 @@ body {
 
 .grayscale {
   filter: grayscale(1);
+}
+
+.icon {
+  width: 27px;
+  height: 27px;
 }
